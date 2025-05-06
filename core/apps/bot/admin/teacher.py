@@ -8,5 +8,8 @@ from core.apps.bot.models import TeacherModel
 class TeacherAdmin(ModelAdmin):
     list_display = (
         "id",
-        "__str__",
+        "first_name",
+        "last_name",
+        "age",
+        "category",
     )

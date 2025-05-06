@@ -33,7 +33,7 @@ class TeacherModel(AbstractBaseModel):
     
     
     def __str__(self):
-        return self.pk
+        return self.first_name
 
     @classmethod
     def _create_fake(self):

@@ -8,5 +8,5 @@ from core.apps.bot.models import CategoryModel
 class CategoryAdmin(ModelAdmin):
     list_display = (
         "id",
-        "__str__",
+        "name",
     )
