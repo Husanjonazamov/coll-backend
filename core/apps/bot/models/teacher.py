@@ -5,6 +5,14 @@ from django_core.models import AbstractBaseModel
 
 class TeacherModel(AbstractBaseModel):
     first_name = models.CharField(verbose_name=_("Ism"), max_length=255)
+    category = models.ForeignKey(
+        "bot.CategoryModel",
+        on_delete=models.CASCADE,
+        related_name="teacher",
+        verbose_name=_("Kategoriya"),
+        null=True,
+        blank=True,
+    )
     last_name = models.CharField(
         verbose_name=_("Familya"),
         max_length=255,
