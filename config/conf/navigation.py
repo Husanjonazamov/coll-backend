@@ -17,14 +17,25 @@ PAGES = [
         "separator": True,  # Top border
         "items": [
             {
-                "title": _("Users"),
-                "icon": "group",
-                "link": reverse_lazy("admin:http_user_changelist"),
-            },
-            {
                 "title": _("Group"),
                 "icon": "group",
                 "link": reverse_lazy("admin:auth_group_changelist"),
+            },
+        ],
+    },
+    {
+        "title": _("Bot"),
+        "separator": True,  # Top border
+        "items": [
+            {
+                "title": _("O'qituvchilar"),
+                "icon": "school",
+                "link": reverse_lazy("admin:bot_teachermodel_changelist"),
+            },
+             {
+                "title": _("Kategoryalari"),
+                "icon": "category",
+                "link": reverse_lazy("admin:bot_categorymodel_changelist"),
             },
         ],
     },
