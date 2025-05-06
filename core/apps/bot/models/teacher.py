@@ -4,9 +4,26 @@ from django_core.models import AbstractBaseModel
 
 
 class TeacherModel(AbstractBaseModel):
-
-    name = models.CharField(verbose_name=_("name"), max_length=255)
-
+    first_name = models.CharField(verbose_name=_("Ism"), max_length=255)
+    last_name = models.CharField(
+        verbose_name=_("Familya"),
+        max_length=255,
+        null=True,
+        blank=True,
+    )
+    age = models.IntegerField(
+        verbose_name=_("Yosh"),
+        default=0,
+        null=True,
+        blank=True,
+    )
+    description = models.TextField(
+        verbose_name=_("Tavsif"),
+        null=True,
+        blank=True
+    )
+    
+    
     def __str__(self):
         return self.pk
 
