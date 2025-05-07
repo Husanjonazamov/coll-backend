@@ -8,5 +8,6 @@ from core.apps.bot.models import UserModel
 class UserAdmin(ModelAdmin):
     list_display = (
         "id",
-        "__str__",
+        "name",
+        "user_id",
     )
