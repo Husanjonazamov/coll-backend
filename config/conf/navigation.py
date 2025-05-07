@@ -13,13 +13,13 @@ PAGES = [
         ],
     },
     {
-        "title": _("Auth"),
+        "title": _("Foydalanuvchilar"),
         "separator": True,  # Top border
         "items": [
             {
-                "title": _("Group"),
+                "title": _("Foydalanuvchilar"),
                 "icon": "group",
-                "link": reverse_lazy("admin:auth_group_changelist"),
+                "link": reverse_lazy("admin:bot_usermodel_changelist"),
             },
         ],
     },
