@@ -8,7 +8,10 @@ class BaseTeacherSerializer(serializers.ModelSerializer):
         model = TeacherModel
         fields = [
             "id",
-            "name",
+            "first_name",
+            "last_name",
+            "age",
+            "description"
         ]
 
 
@@ -24,5 +27,5 @@ class CreateTeacherSerializer(BaseTeacherSerializer):
     class Meta(BaseTeacherSerializer.Meta):
         fields = [
             "id",
-            "name",
+            "first_name",
         ]

@@ -27,7 +27,7 @@ PAGES = [
         "title": _("Bot"),
         "separator": True,  # Top border
         "items": [
-            {
+            {   
                 "title": _("O'qituvchilar"),
                 "icon": "school",
                 "link": reverse_lazy("admin:bot_teachermodel_changelist"),
