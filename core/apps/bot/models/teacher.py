@@ -30,6 +30,10 @@ class TeacherModel(AbstractBaseModel):
         null=True,
         blank=True
     )
+    is_active = models.BooleanField(
+        verbose_name=_("Faolmi ?"),
+        default=True
+    )
     
     
     def __str__(self):

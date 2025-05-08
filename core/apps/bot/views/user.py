@@ -19,3 +19,4 @@ class UserView(BaseViewSetMixin, ReadOnlyModelViewSet):
         "retrieve": RetrieveUserSerializer,
         "create": CreateUserSerializer,
     }
+    

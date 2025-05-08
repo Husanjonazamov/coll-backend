@@ -11,7 +11,8 @@ class BaseTeacherSerializer(serializers.ModelSerializer):
             "first_name",
             "last_name",
             "age",
-            "description"
+            "description",
+            "is_active"
         ]
 
 
