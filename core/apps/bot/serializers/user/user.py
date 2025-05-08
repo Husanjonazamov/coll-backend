@@ -25,4 +25,5 @@ class CreateUserSerializer(BaseUserSerializer):
         fields = [
             "id",
             "name",
+            "user_id"
         ]

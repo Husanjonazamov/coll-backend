@@ -8,6 +8,7 @@ class UserModel(AbstractBaseModel):
     user_id = models.BigIntegerField(
         verbose_name=_("Telegram id"),
         default=0,
+        unique=True,
         blank=True, 
         null=True
     )
