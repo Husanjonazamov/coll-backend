@@ -20,3 +20,10 @@ class UserView(BaseViewSetMixin, ModelViewSet):
         "create": CreateUserSerializer,
     }
     
+    def get_serializer_class(self):
+        return self.action_serializer_class.get(self.action, ListUserSerializer)
+
+    lookup_field = "user_id" 
+    lookup_url_kwarg = "user_id"
+
+    

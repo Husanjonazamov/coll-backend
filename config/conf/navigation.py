@@ -32,11 +32,11 @@ PAGES = [
                 "icon": "school",
                 "link": reverse_lazy("admin:bot_teachermodel_changelist"),
             },
-             {
-                "title": _("Kategoryalari"),
-                "icon": "category",
-                "link": reverse_lazy("admin:bot_categorymodel_changelist"),
-            },
+            #  {
+            #     "title": _("Kategoryalari"),
+            #     "icon": "category",
+            #     "link": reverse_lazy("admin:bot_categorymodel_changelist"),
+            # },
         ],
     },
 ]

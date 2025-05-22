@@ -4,32 +4,8 @@ from django_core.models import AbstractBaseModel
 
 
 class TeacherModel(AbstractBaseModel):
-    first_name = models.CharField(verbose_name=_("Ism"), max_length=255)
-    category = models.ForeignKey(
-        "bot.CategoryModel",
-        on_delete=models.CASCADE,
-        related_name="teacher",
-        verbose_name=_("Kategoriya"),
-        null=True,
-        blank=True,
-    )
-    last_name = models.CharField(
-        verbose_name=_("Familya"),
-        max_length=255,
-        null=True,
-        blank=True,
-    )
-    age = models.IntegerField(
-        verbose_name=_("Yosh"),
-        default=0,
-        null=True,
-        blank=True,
-    )
-    description = models.TextField(
-        verbose_name=_("Tavsif"),
-        null=True,
-        blank=True
-    )
+    name = models.CharField(verbose_name=_("Ism"), max_length=255)
+   
     is_active = models.BooleanField(
         verbose_name=_("Faolmi ?"),
         default=True
@@ -37,7 +13,7 @@ class TeacherModel(AbstractBaseModel):
     
     
     def __str__(self):
-        return self.first_name
+        return self.name
 
     @classmethod
     def _create_fake(self):
