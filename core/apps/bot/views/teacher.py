@@ -6,7 +6,6 @@ from rest_framework.viewsets import ReadOnlyModelViewSet
 from core.apps.bot.models import TeacherModel
 from core.apps.bot.serializers.teacher import CreateTeacherSerializer, ListTeacherSerializer, RetrieveTeacherSerializer
 
-
 @extend_schema(tags=["teacher"])
 class TeacherView(BaseViewSetMixin, ReadOnlyModelViewSet):
     queryset = TeacherModel.objects.all()
